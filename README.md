@@ -2,11 +2,11 @@
 
 Portfólio pessoal com estética de catálogo de serviços — cards com mockups visuais, integração com GitHub e deploy automático no GitHub Pages.
 
-![preview](https://jjoaobraz.github.io/portifolio.sh)
+![preview](https://jjoaobraz.github.io/servicos)
 
 ## 🔗 Demo
 
-**[jjoaobraz.github.io/portifolio.sh](https://jjoaobraz.github.io/portifolio.sh)**
+**[jjoaobraz.github.io/servicos](https://jjoaobraz.github.io/servicos)**
 
 ---
 
