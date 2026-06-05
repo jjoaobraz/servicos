@@ -20,11 +20,13 @@ jobs:
         run: |
           curl -sf "https://wakatime.com/api/v1/users/current/stats/last_7_days" \
             -H "Authorization: Basic $(printf '%s' "$WAKATIME_API_KEY" | base64 -w 0)" \
-          | python3 - <<'EOF'
-          import json, sys
+            -o /tmp/wakatime_response.json
 
-          raw = sys.stdin.read()
-          data = json.loads(raw).get('data', {})
+          python3 <<'EOF'
+          import json
+
+          with open('/tmp/wakatime_response.json') as f:
+              data = json.load(f).get('data', {})
 
           langs = data.get('languages', [])
           top   = langs[0]['name'] if langs else 'N/A'
